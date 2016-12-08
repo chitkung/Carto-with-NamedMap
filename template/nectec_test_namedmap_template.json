@@ -1,0 +1,31 @@
+{
+    "template": {
+        "auth": {
+            "method": "open"
+        },
+        "version": "0.0.1",
+        "name": "nectec_test_namedmap",
+        "placeholders": {
+            "sql_statement": {
+                "type": "sql_ident",
+                "default": ""
+            },
+            "css_layer": {
+                "type": "sql_ident",
+                "default": ""
+            }
+        },
+        "layergroup": {
+            "version": "1.0.1",
+            "layers": [{
+                "type": "cartodb",
+                "options": {
+                    "cartocss_version": "2.1.1",
+                    "cartocss": "<%= css_layer %>",
+                    "sql": "<%= sql_statement %>",
+                    "interactivity": ["cartodb_id"]
+                }
+            }]
+        }
+    }
+}
